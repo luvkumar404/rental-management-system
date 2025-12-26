@@ -1,37 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WanderLust</title>
-  </head>
-  <body>
-    <h3>Create a New Listing</h3>
-    <form method="POST" action="/listings">
-      <input name="listing[title]" placeholder="enter title" type="text" />
-      <br /><br />
-      <textarea
-        name="listing[description]"
-        placeholder="enter description"
-      ></textarea>
-      <br /><br />
-      <input
-        name="listing[image]"
-        placeholder="enter image URL/Link"
-        type="text"
-      />
-      <br /><br />
-      <input name="listing[price]" placeholder="enter price" type="number" />
-      <br /><br />
-      <input name="listing[country]" placeholder="enter country" type="text" />
-      <br /><br />
-      <input
-        name="listing[location]"
-        placeholder="enter location"
-        type="text"
-      />
-      <br /><br />
-      <button>Add</button>
-    </form>
-  </body>
-</html>
+<% layout("/layouts/boilerplate.ejs") %>
+
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <br />
+      <h2>Create new Listing</h2>
+
+      <form
+        action="/listings"
+        method="post"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="listings[title]" class="form-label">Title</label>
+          <input
+            type="text"
+            placeholder="Add a catchy Title"
+            name="listings[title]"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Title looks good!</div>
+          <div class="invalid-feedback">Please enter title</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="listings[description]" class="form-label"
+            >Description</label
+          >
+          <textarea
+            name="listings[description]"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="valid-feedback">Description looks good!</div>
+          <div class="invalid-feedback">Please enter short description</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="listings[image]" class="form-label">Upload listing image</label>
+          <input
+            type="file"
+            name="listings[image]"
+            placeholder="Upload image"
+            class="form-control"
+            required 
+          />
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="listings[price]" class="form-label">Price</label>
+            <input
+              type="number"
+              name="listings[price]"
+              placeholder="1200"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">Price looks good!</div>
+            <div class="invalid-feedback">Price should be valid</div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="listings[country]" class="form-label">Country</label>
+            <input
+              type="text"
+              placeholder="India"
+              name="listings[country]"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">Country looks good!</div>
+            <div class="invalid-feedback">Please enter country</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            placeholder="Rajasthan, Jaipur"
+            name="listings[location]"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">location looks good!</div>
+          <div class="invalid-feedback">Please enter valid location</div>
+        </div>
+
+        <br />
+        <button class="btn btn-dark submit_btn">Submit</button>
+        <br /><br /><br />
+      </form>
+    </div>
+  </div>
+</body>

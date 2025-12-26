@@ -1,0 +1,152 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-optical-sizing: auto !important;
+    /* font-weight: <weight>; */
+    font-style: normal !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* visibility: hidden; */
+}
+
+.container{
+    /* display: flex; */
+    flex: 1;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+
+}
+
+.search-box i{
+    display: inline;
+}
+.search-box input{
+    border-radius: 20px;
+    border-color: rgba(255, 0, 0, 0.253);
+    padding: 0.5rem 2.5rem 0.5rem 3.5rem;
+    font-size: 1rem;
+}
+
+.search-box button{
+    border-radius: 20px !important;
+
+
+}
+
+.nav-link {
+    color: rgb(0, 0, 0) !important;
+}
+
+.navbar-brand b{
+    color: #fe424b;
+}
+
+
+
+/* ------------>Footer<------------ */
+
+.fa-compass {
+    color: #fe424b;
+    margin-right: 10px;
+}
+
+.f-info {
+    background-color: #ebebeb;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    text-align: center;
+
+
+}
+
+
+
+.f-info-links,
+.f-info-socials,
+.f-info-company {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-links a {
+    text-decoration: none;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+
+.f-info-socials a {
+    color: black;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin: .3rem;
+
+}
+
+/* ------------>Card<------------ */
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card p {
+    color: black;
+}
+
+.listing-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: #ebebeb;
+}
+
+/* ------------>Edit and Add page<------------ */
+
+.submit_btn{
+    background-color:#fe424b !important;
+    border: none !important;
+}
+
+/* ------------>Show page<------------ */
+.show_img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+     
+}
+
+.btns .btn{
+    margin: 10px;
+    margin-top: -15px;
+}
+
+
+ 
