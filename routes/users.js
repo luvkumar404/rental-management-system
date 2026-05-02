@@ -4,7 +4,7 @@ const User = require("../models/user");
 const wrapAsync = require("../utils/wrapAsync");
 const passport = require("passport");
 const { saveUrl } = require("../middleware");
-const userController = require("../controllers/users");
+const userController = require("../controller/users");
 
 //======================>SIGN-UP<======================//
 
